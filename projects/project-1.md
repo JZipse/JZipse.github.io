@@ -27,15 +27,17 @@ In the future I would like to adjust the game to add some more real life basebal
 Here is some code that illustrates how I decided if the hitter achieved a hit:
 
 ```js
-byte ADCRead(byte ch)
-{
-    word value;
-    ADC1SC1 = ch;
-    while (ADC1SC1_COCO != 1)
-    {   // wait until ADC conversion is completed   
-    }
-    return ADC1RL;  // lower 8-bit value out of 10-bit data from the ADC
-}
+while (outs != 3) {
+            Hitter currHitter = hitter.remove();
+            double isHit = rand.nextDouble();
+            if (isHit <= currHitter.getAvg()) {
+                hits++;
+                System.out.printf("\n--HIT! Chance: %2.3f perChance: %s Hitter %s ", isHit, currHitter.getAvg(), currHitter.getName());
+                hitter.add(currHitter);
+                if (hits >= 3) {
+                    runs++;
+                    System.out.print(" Run Scored!");
+                }
 ```
 
 
