@@ -24,7 +24,7 @@ achieved, the inning ended.
 I really enjoyed working on this problem as it really helped me get a handle on how the queue data structure works and I am also a big fan of baseball.
 In the future I would like to adjust the game to add some more real life baseball elements like home runs and maybe even a balls and strike counter.
 
-Here is some code that illustrates how we read values from the line sensors:
+Here is some code that illustrates how I decided if the hitter achieved a hit:
 
 ```js
 byte ADCRead(byte ch)
