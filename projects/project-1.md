@@ -1,28 +1,28 @@
 ---
 layout: project
 type: project
-image: images/micromouse.jpg
-title: Micromouse
-permalink: projects/micromouse
+image: 
+title: Baseball sim
+permalink: projects/baseball sim
 # All dates must be YYYY-MM-DD format!
-date: 2015-07-01
+date: 2019-02-19
 labels:
-  - Robotics
-  - Arduino
-  - C++
-summary: My team developed a robotic mouse that won first place in the 2015 UH Micromouse competition.
+  - Java
+summary: I built a simple baseball game using baseball averages along with a random number generator and took a lineup using a queue
 ---
 
-<div class="ui small rounded images">
-  <img class="ui image" src="../images/micromouse-robot.png">
-  <img class="ui image" src="../images/micromouse-robot-2.jpg">
-  <img class="ui image" src="../images/micromouse.jpg">
-  <img class="ui image" src="../images/micromouse-circuit.png">
-</div>
 
-Micromouse is an event where small robot “mice” solve a 16 x 16 maze.  Events are held worldwide.  The maze is made up of a 16 by 16 gird of cells, each 180 mm square with walls 50 mm high.  The mice are completely autonomous robots that must find their way from a predetermined starting position to the central area of the maze unaided.  The mouse will need to keep track of where it is, discover walls as it explores, map out the maze and detect when it has reached the center.  having reached the center, the mouse will typically perform additional searches of the maze until it has found the most optimal route from the start to the center.  Once the most optimal route has been determined, the mouse will run that route in the shortest possible time.
 
-For this project, I was the lead programmer who was responsible for programming the various capabilities of the mouse.  I started by programming the basics, such as sensor polling and motor actuation using interrupts.  From there, I then programmed the basic PD controls for the motors of the mouse.  The PD control the drive so that the mouse would stay centered while traversing the maze and keep the mouse driving straight.  I also programmed basic algorithms used to solve the maze such as a right wall hugger and a left wall hugger algorithm.  From there I worked on a flood-fill algorithm to help the mouse track where it is in the maze, and to map the route it takes.  We finished with the fastest mouse who finished the maze within our college.
+For one of my assignments in my data structures class, we were tasked with taking a baseball lineup consisting of 9 players and their 9 averages
+and making a simple game that keep running through different innings until the winning score is met. Every inning had to end in either 3 outs or 
+when the winning score was achieved. We also had to make sure we kept the batting order in tact so that every person was batting so after the first 
+3 batters got out, when the next inning started, the 4th batter was up. This was achieved through the use of a queue that stored a batter object which
+stored the first and last name as well as their batting average. To determine if the batter got a hit, a random number generator was used. If the number 
+came out to be less than the average, it was a hit, and 4 hits would equate to 1 run. If the number was greater, the batter was out and once 3 outs were 
+achieved, the inning ended.
+
+I really enjoyed working on this problem as it really helped me get a handle on how the queue data structure works and I am also a big fan of baseball.
+In the future I would like to adjust the game to add some more real life baseball elements like home runs and maybe even a balls and strike counter.
 
 Here is some code that illustrates how we read values from the line sensors:
 
@@ -38,7 +38,6 @@ byte ADCRead(byte ch)
 }
 ```
 
-You can learn more at the [UH Micromouse Website](http://www-ee.eng.hawaii.edu/~mmouse/about.html).
 
 
 
